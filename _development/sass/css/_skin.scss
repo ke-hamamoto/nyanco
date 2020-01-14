@@ -1,0 +1,132 @@
+@mixin stripe($deg, $wid, $color1, $color2, $grad) {
+    @if $grad==true {
+        background: repeating-linear-gradient($deg,
+            $color1 #{0*$wid},
+            $color1 #{0.5*$wid},
+            $color2 #{1*$wid},
+            $color2 #{1.5*$wid},
+            $color1 #{2*$wid});
+    }
+
+    @else {
+        background: repeating-linear-gradient($deg,
+            $color1 #{0*$wid},
+            $color1 #{1*$wid},
+            $color2 #{1*$wid},
+            $color2 #{2*$wid});
+    }
+}
+
+.n-stripe {
+    @include stripe(-45deg, 5px, #F9F5EF, #F5EFE6, true);
+}
+
+/*.n-stripe {
+    -webkit-background-size: 15px 15px;
+    -moz-background-size: 15px 15px;
+    background-size: 15px 15px;
+    background-color: #f5f0e7;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+            color-stop(.25, #f9f5f0), color-stop(.25, transparent),
+            color-stop(.5, transparent), color-stop(.5, #f9f5f0),
+            color-stop(.75, #f9f5f0), color-stop(.75, transparent),
+            to(transparent));
+    background-image: -webkit-linear-gradient(-45deg, #f9f5f0 25%, transparent 25%,
+            transparent 50%, #f9f5f0 50%, #f9f5f0 75%,
+            transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-45deg, #f9f5f0 25%, transparent 25%,
+            transparent 50%, #f9f5f0 50%, #f9f5f0 75%,
+            transparent 75%, transparent);
+    background-image: -ms-linear-gradient(-45deg, #f9f5f0 25%, transparent 25%,
+            transparent 50%, #f9f5f0 50%, #f9f5f0 75%,
+            transparent 75%, transparent);
+    background-image: -o-linear-gradient(-45deg, #f9f5f0 25%, transparent 25%,
+            transparent 50%, #f9f5f0 50%, #f9f5f0 75%,
+            transparent 75%, transparent);
+    background-image: linear-gradient(-45deg, #f9f5f0 25%, transparent 25%,
+            transparent 50%, #f9f5f0 50%, #f9f5f0 75%,
+            transparent 75%, transparent);
+}*/
+
+.n-skin-description {
+    color: #5e412f;
+}
+
+.n-midashi-skin-pickup {
+    color: #88684e;
+    font-family: 'Futura';
+    font-weight: normal;
+}
+
+.n-midashi-skin-keeper {
+    color: #88684e;
+}
+
+.n-li-skin-circle {
+    border-radius: 20px;
+    background: #fff;
+}
+
+.n-c-btn-orrange {
+    color: #fff;
+    background: #f07818;
+}
+
+.n-c-btn-green {
+    color: #fff;
+    background: #57b5a0;
+}
+
+.n-active {
+    color: #fff;
+    background: #88684e;
+}
+
+.n-hover {
+    transition: background-color 0.5s;
+}
+
+.n-hover:hover {
+    background-color: #c5b8a5;
+}
+
+.n-hover-opacity {
+    transition: opacity 0.5s;
+}
+
+.n-hover-opacity:hover {
+    opacity: 0.5;
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.n-anim-tag {
+    animation: opacity 0.5s;
+}
+
+.a-gnavi,
+.a-gnavi:visited,
+.a-gnavi:link {
+    text-decoration: none;
+    color: #88684e;
+
+    .n-active & {
+        color: #fff;
+    }
+}
+
+.a-nyancos,
+.a-nyancos:visited,
+.a-nyancos:link {
+    text-decoration: none;
+    color: #000;
+}
